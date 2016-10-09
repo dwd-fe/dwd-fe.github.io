@@ -1,0 +1,279 @@
+#post {
+  background-color: #fff;
+}
+.post-header {
+  width: 100%;
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+}
+.post-header .post-back {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.post-space {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+.post-title {
+  color: #fff;
+}
+.post-title h1 {
+  margin-top: 150px;
+  margin-bottom: 30px;
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 200;
+  text-align: center;
+}
+.post-title h2 {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 200;
+  text-align: center;
+  color: #d4d2d2;
+}
+.post-title h2 a {
+  color: #d4d2d2;
+}
+.post-title h2 a:hover {
+  color: #ff7600;
+}
+.post-content {
+  max-width: 920px;
+  padding: 20px 26px;
+  margin: 0px auto;
+  position: relative;
+}
+#return-to-top {
+  display: block;
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  background-image: url("http://7xtb3a.com2.z0.glb.clouddn.com/position.png");
+  background-position: 100px 0;
+  background-size: 150px 50px;
+  z-index: 20;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 960px) {
+  .post-header .post-back {
+    width: 960px;
+    display: block;
+  }
+}
+.post-content pre,
+.post-content .highlight {
+  overflow: auto;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #c5c8c6;
+  background: #1d1f21;
+  line-height: $line-height-code-block;
+}
+.post-content {
+  line-height: 1.8;
+  font-size: 16px;
+}
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  position: relative;
+  margin: 1em 0;
+}
+.post-content h2:before,
+.post-content h3:before,
+.post-content h4:before,
+.post-content h5:before,
+.post-content h6:before {
+  color: #000;
+  position: absolute;
+  left: -0.7em;
+  top: -4px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.post-content h2,
+.post-content h3 {
+  font-size: 22px;
+}
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-size: 18px;
+}
+.post-content a {
+  color: #ff7600;
+  word-break: break-all;
+}
+.post-content blockquote {
+  margin: 2em 0;
+  padding-left: 20px;
+  border-left: 4px solid #42b983;
+}
+.post-content img {
+  display: block;
+  max-width: 100%;
+  margin: 1em auto;
+}
+.post-content > table,
+.post-content > figure.highlight {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+}
+.post-content .tip {
+  position: relative;
+  margin: 2em 0;
+  padding: 12px 24px 12px 30px;
+  border-left: 4px solid #f66;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.post-content .tip br {
+  display: none;
+}
+.post-content #mask {
+  position: fixed;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  padding: 1em 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+.post-content #mask #mask-image {
+  max-width: 95%;
+}
+.post-content pre,
+.post-content code {
+  font-family: $font-family-monospace;
+}
+.post-content code {
+  padding: 2px 4px;
+  word-break: break-all;
+  color: $black-light;
+  background: $gainsboro;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.post-content pre code {
+  padding: 0;
+  color: #c5c8c6;
+  background: none;
+  text-shadow: none;
+}
+.post-content .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 1px;
+}
+.post-content .highlight table {
+  margin: 0;
+  width: auto;
+  border: none;
+}
+.post-content .highlight td {
+  border: none;
+  padding: 0;
+}
+.post-content .highlight figcaption {
+  font-size: 1em;
+  color: #c5c8c6;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.post-content .highlight figcaption a {
+  float: right;
+  color: #c5c8c6;
+}
+.post-content .highlight figcaption a:hover {
+  border-bottom-color: #c5c8c6;
+}
+.post-content .highlight .gutter pre {
+  color: $grey-dim;
+  text-align: right;
+  padding-right: 20px;
+}
+.post-content .highlight .line {
+  height: 20px;
+}
+.post-content .gist table {
+  width: auto;
+}
+.post-content .gist table td {
+  border: none;
+}
+.post-content pre .comment {
+  color: #969896;
+}
+.post-content pre .variable,
+.post-content pre .attribute,
+.post-content pre .tag,
+.post-content pre .regexp,
+.post-content pre .ruby .constant,
+.post-content pre .xml .tag .title,
+.post-content pre .xml .pi,
+.post-content pre .xml .doctype,
+.post-content pre .html .doctype,
+.post-content pre .css .id,
+.post-content pre .css .class,
+.post-content pre .css .pseudo {
+  color: #c66;
+}
+.post-content pre .number,
+.post-content pre .preprocessor,
+.post-content pre .built_in,
+.post-content pre .literal,
+.post-content pre .params,
+.post-content pre .constant,
+.post-content pre .command {
+  color: #de935f;
+}
+.post-content pre .ruby .class .title,
+.post-content pre .css .rules .attribute,
+.post-content pre .string,
+.post-content pre .value,
+.post-content pre .inheritance,
+.post-content pre .header,
+.post-content pre .ruby .symbol,
+.post-content pre .xml .cdata,
+.post-content pre .special,
+.post-content pre .number,
+.post-content pre .formula {
+  color: #b5bd68;
+}
+.post-content pre .title,
+.post-content pre .css .hexcolor {
+  color: #8abeb7;
+}
+.post-content pre .function,
+.post-content pre .python .decorator,
+.post-content pre .python .title,
+.post-content pre .ruby .function .title,
+.post-content pre .ruby .title .keyword,
+.post-content pre .perl .sub,
+.post-content pre .javascript .title,
+.post-content pre .coffeescript .title {
+  color: #81a2be;
+}
+.post-content pre .keyword,
+.post-content pre .javascript .function {
+  color: #b294bb;
+}

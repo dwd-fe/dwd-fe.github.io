@@ -1,0 +1,84 @@
+#recent-posts {
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.recent-post-item {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 14px;
+}
+.recent-post-item .recent-post-content {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+}
+.recent-post-item .recent-post-content .recent-post-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+.recent-post-item .recent-post-content .recent-post-img img {
+  width: 100%;
+}
+.recent-post-item .recent-post-content .recent-post-title {
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 2;
+  padding: 4px 10px 0 10px;
+  color: #333;
+}
+.recent-post-item .recent-post-content .recent-post-title:hover {
+  color: #ff7600;
+}
+.recent-post-item .recent-post-content .recent-post-small {
+  padding: 0 10px 4px 10px;
+  line-height: 2;
+  color: #929292;
+}
+.recent-post-item .recent-post-content .tags-link {
+  color: #929292;
+}
+.recent-post-item .recent-post-content .tags-link:hover {
+  color: #ff7600;
+}
+.recent-post-more {
+  width: 350px;
+  height: 45px;
+  border-radius: 4px;
+  background: #fff;
+  text-align: center;
+  margin: 20px auto;
+}
+.recent-post-more .recent-post-more-content {
+  width: 100%;
+}
+.recent-post-more .recent-post-more-content span {
+  line-height: 45px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #333;
+}
+.recent-post-more .recent-post-more-content:hover span {
+  color: #ff7600;
+}
+@media screen and (max-width: 1200px) {
+  .recent-post-item {
+    width: 33.333333333333336%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .recent-post-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .recent-post-item {
+    width: 100%;
+  }
+}
