@@ -61,6 +61,7 @@ nav#menu-inner a:hover {
   width: 100%;
   min-height: 310px;
   position: relative;
+  overflow: hidden;
 }
 .banner .banner-back {
   width: 100%;
@@ -263,6 +264,7 @@ nav#menu-inner a:hover {
   padding: 20px 26px;
   margin: 0px auto;
   position: relative;
+  overflow: hidden;
 }
 #return-to-top {
   display: block;
