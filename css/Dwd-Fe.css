@@ -300,6 +300,7 @@ nav#menu-inner a:hover {
 .post-content .highlight {
   overflow: auto;
   padding: 0 15px;
+  margin: 10px 0;
   font-size: 14px;
   color: #c5c8c6;
   background: #1d1f21;
@@ -427,7 +428,7 @@ nav#menu-inner a:hover {
 .post-content .highlight .gutter pre {
   color: $grey-dim;
   text-align: right;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .post-content .highlight .line {
   height: 20px;
