@@ -11,7 +11,7 @@
 <p>上面的代码实际上的任务是等待1000毫秒，<code>() =&gt; alert(&#39;1000毫秒后出现我！&#39;)</code>就是回调函数。</p>
 <p>回调函数很好用也很好理解，但是需要多个异步数据一起利用怎么办？一个异步任务的必要条件是另一个异步任务的结果又该怎么办？有人就开始写嵌套的 callback，俗称回调金字塔。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fun1(<span class="function"><span class="keyword">function</span> (<span class="params">value1</span>) </span>&#123;</div><div class="line">    fun2(value1, <span class="function"><span class="keyword">function</span>(<span class="params">value2</span>) </span>&#123;</div><div class="line">        fun3(value2, <span class="function"><span class="keyword">function</span>(<span class="params">value3</span>) </span>&#123;</div><div class="line">            fun4(value3, <span class="function"><span class="keyword">function</span>(<span class="params">value4</span>) </span>&#123;</div><div class="line">                <span class="comment">// …</span></div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>这种代码在 node 等高频异步处理里很常见。写着是挺好写的，等过了一天后你回头看自己的代码，写得都是写什么鬼？</p>
+<p>这种代码在 node 等高频异步处理里很常见。写着是挺好写的，等过了一天后你回头看自己的代码，写得都是些什么鬼？</p>
 <p>至此我们就要踏上一场寻找前端异步处理最佳方案的道路。正如题目所说，你以为你入门了，其实前方还有一道又一道的门，俗称前端摩尔定律～</p>
 <h2 id="EventProxy-与发布／订阅模式"><a href="#EventProxy-与发布／订阅模式" class="headerlink" title="EventProxy 与发布／订阅模式"></a>EventProxy 与发布／订阅模式</h2><p>正如这个库的作者<a href="https://github.com/JacksonTian" target="_blank" rel="external">朴灵</a>大大所说：</p>
 <blockquote>
@@ -75,7 +75,8 @@
 <p>相比于 Generator，async/await 在语义上更清晰，<code>async</code>的意思是异步，<code>await</code>的意思是等待。async/await 本身就是为处理异步而生，而 Generator 并不是专门处理异步的。<code>await</code>后面除了可以跟 promise 对象，还可以用原始类型的值（当然这样的话就和同步操作没有区别了）。</p>
 <p>这么酷的语法要使用的话在 node 端7.0版本已经原生支持，在前端可以通过 babel 编译来实现。当然万能的 chrome 控制台也可以直接使用的～</p>
 <h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>在宁 js 大会上我第一次听说 Rx.js（原谅我孤陋寡闻），这也是很好的异步处理方案。等以后再专门写一篇 Rx.js 的入门。前端的异步解决方案这么多，说到底还是因为人们对于 callback 的恐惧。这些解决方案有个共同的特点，就是越来越像同步的代码，这样的好处就是代码更易读了，思维不用随着 callback 跳来跳去了。最后说一句，本文只是入门，没有涉及具体的实现，要想学好它们的话还是需要深入代码，了解它们背后的思想。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/alsotang/node-lessons/tree/master/lesson4" target="_blank" rel="external">https://github.com/alsotang/node-lessons/tree/master/lesson4</a><br><a href="http://www.infoq.com/cn/articles/generator-and-asynchronous-programming" target="_blank" rel="external">http://www.infoq.com/cn/articles/generator-and-asynchronous-programming</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/alsotang/node-lessons/tree/master/lesson4" target="_blank" rel="external">https://github.com/alsotang/node-lessons/tree/master/lesson4</a></p>
+<p><a href="http://www.infoq.com/cn/articles/generator-and-asynchronous-programming" target="_blank" rel="external">http://www.infoq.com/cn/articles/generator-and-asynchronous-programming</a></p>
 <span id="return-to-top"></span><div data-thread-key="2016/11/01/前端从入门到再次入门 - 异步/" data-title="前端从入门到再次入门 - 异步" data-url="http://fe.dianwoda.com/2016/11/01/前端从入门到再次入门 - 异步/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"dwd-fe"};
 (function() {
     var ds = document.createElement('script');
