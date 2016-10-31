@@ -272,6 +272,9 @@ nav#menu-inner a:hover {
   position: relative;
   overflow: hidden;
 }
+.post-content p {
+  margin: 10px 0;
+}
 #return-to-top {
   display: block;
   position: absolute;
